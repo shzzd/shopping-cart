@@ -91,10 +91,14 @@
       const minusPhone = document.getElementById('minus1');
       minusPhone.addEventListener('click',function () {
 
-         plusMinus('addSub1',-1,'phone',-1219);
+         const addSubOne = document.getElementById('addSub1').value;
+         const addSubOneNum = parseFloat(addSubOne);
+         if(addSubOneNum>1){
+            plusMinus('addSub1',-1,'phone',-1219);
 
-         totalPrice('subtotal',-1219);
-         totalPrice('total',-1219);
+            totalPrice('subtotal',-1219);
+            totalPrice('total',-1219);
+         }
 
       })
 
@@ -110,11 +114,14 @@
 
       const minusCase = document.getElementById('minus2');
       minusCase.addEventListener('click',function () {
+         const addSubOne = document.getElementById('addSub2').value;
+         const addSubOneNum = parseFloat(addSubOne);
+         if(addSubOneNum>1){
+            plusMinus('addSub2',-1,'case',-59);
 
-         plusMinus('addSub2',-1,'case',-59);
-
-         totalPrice('subtotal',-59);
-         totalPrice('total',-59);
+            totalPrice('subtotal',-59);
+            totalPrice('total',-59);
+         }
 
       })
 
